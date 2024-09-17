@@ -1,0 +1,56 @@
+html {
+  /* ****Colors**** */
+  --primaryColor: #5b5fc7;
+  --gray: #f0f0f0;
+  --white: #ffffff;
+  --text-color: #616161;
+  /* ****Font family**** */
+  --fontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+input,
+select {
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+body {
+  background-color: var(--white);
+  color: var(--text-color);
+  font-family: var(--fontFamily);
+  font-size: 14px;
+  line-height: 1.5em;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}

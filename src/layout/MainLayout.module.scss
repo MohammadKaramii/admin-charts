@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+}
+
+.main {
+  background-color: var(--white);
+  overflow-x: hidden;
+  flex-grow: 1;
+
+  &__content {
+    min-height: 100vh;
+  }
+}

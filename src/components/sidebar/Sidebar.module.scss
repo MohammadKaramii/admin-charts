@@ -1,0 +1,65 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: var(--gray);
+  color: var(--text-color);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 200;
+  overflow-y: auto;
+  overflow-x: hidden;
+  &__logo {
+    display: flex;
+    justify-content: center;
+    padding-block: 8px;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-start;
+
+    &__item {
+      position: relative;
+      padding: 8px 16px;
+      white-space: none;
+      &:hover {
+        color: var(--primaryColor);
+      }
+
+      &.active {
+        color: var(--primaryColor);
+
+        svg {
+          path {
+            fill: var(--primaryColor);
+          }
+        }
+
+        &::before {
+          content: "";
+          height: 48px;
+          background-color: var(--primaryColor);
+          border-radius: 20px;
+          position: absolute;
+          left: 2px;
+          top: 4px;
+          width: 2px;
+        }
+      }
+
+      &__icon {
+        text-align: center;
+      }
+      &__txt {
+        white-space: nowrap;
+        font-size: 10px;
+        line-height: 14px;
+      }
+    }
+  }
+}
