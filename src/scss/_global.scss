@@ -2,10 +2,12 @@ html {
   /* ****Colors**** */
   --primaryColor: #5b5fc7;
   --gray: #f0f0f0;
+  --gray2: #d1d1d1;
   --white: #ffffff;
-  --text-color: #616161;
+  --black: #000000;
+  --text-color-primary: #616161;
+  --text-color-secondary: #424242;
   --text-color-bold: #242424;
-  --text-color-disable: #424242;
   /* ****Font family**** */
   --fontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -43,7 +45,7 @@ body {
   color: var(--text-color);
   font-family: var(--fontFamily);
   font-size: 14px;
-  line-height: 1.5em;
+  line-height: 20px;
   font-weight: 400;
   overflow-x: hidden;
 }

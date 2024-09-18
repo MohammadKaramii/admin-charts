@@ -1,0 +1,64 @@
+.filterNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid var(--gray);
+  border-bottom: 2px solid var(--gray);
+
+  &_left {
+    display: flex;
+    align-items: center;
+    padding: 8px 24px;
+    gap: 8px;
+
+    &_divider {
+      border-left: 1px solid var(--gray2);
+      height: 16px;
+    }
+  }
+
+  &_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 20px;
+
+    h4 {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 600px;
+    }
+
+    &_searchBox {
+      position: relative;
+      width: 200px;
+      height: 32px;
+      border-radius: 4px;
+
+      &_input {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        padding-block: 10px;
+        cursor: text;
+        color: var(--black);
+        border: 2px solid var(--gray2);
+        border-radius: 4px;
+        outline: none;
+        background-color: var(--white);
+        font-size: 14px;
+        line-height: 22px;
+        padding-left: 24px;
+      }
+
+      &_icon {
+        left: 8px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
