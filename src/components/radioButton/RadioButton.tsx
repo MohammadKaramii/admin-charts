@@ -27,6 +27,7 @@ const RadioButton = () => {
         id={inputId}
         onClick={handleClick}
         checked={checked}
+    readOnly
       />
       <span
         className={`${classes.radioButtons_bullet} ${

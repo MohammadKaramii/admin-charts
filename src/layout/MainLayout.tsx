@@ -1,7 +1,9 @@
 import Sidebar from "../components/sidebar/Sidebar";
 import PageNav from "../components/pageNav/pageNav";
-import classes from "./MainLayout.module.scss";
 import FilterNav from "../components/filterNav/FilterNav";
+import Dropdown from "../components/dropDown/Dropdown";
+
+import classes from "./MainLayout.module.scss";
 
 const MainLayout = () => {
   return (
@@ -11,6 +13,7 @@ const MainLayout = () => {
         <div className={classes.main__content}>
           <PageNav />
           <FilterNav />
+          <Dropdown />
         </div>
       </div>
     </div>

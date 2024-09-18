@@ -25,6 +25,7 @@ function FilterNav() {
             type="text"
             placeholder="Find"
             className={classes.filterNav_right_searchBox_input}
+            defaultChecked
           />
           <SearchSVG  className={classes.filterNav_right_searchBox_icon} />
         </div>

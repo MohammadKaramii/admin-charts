@@ -3,6 +3,7 @@ html {
   --primaryColor: #5b5fc7;
   --gray: #f0f0f0;
   --gray2: #d1d1d1;
+  --gray3: #e0e0e0;
   --white: #ffffff;
   --black: #000000;
   --text-color-primary: #616161;
@@ -21,7 +22,8 @@ html {
 }
 
 ol,
-ul {
+ul,
+li {
   list-style: none;
 }
 
@@ -31,7 +33,8 @@ a {
 }
 
 input,
-select {
+select,
+button {
   font-family: inherit;
   color: inherit;
   font-size: inherit;
