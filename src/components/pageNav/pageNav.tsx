@@ -1,8 +1,9 @@
 import { MouseEvent, useCallback, useState } from "react";
-import classes from "./TopNav.module.scss";
 import { ElipsisSVG, LinkSVG, VanArsdelLogoSVG } from "../../assets/svgs";
 
-function TopNav() {
+import classes from "./PageNav.module.scss";
+
+function PageNav() {
   const tabs = ["Home", "Timeline", "Chat", "Assigned to you"];
   const [activeTabId, setActiveTabId] = useState(0);
 
@@ -40,4 +41,4 @@ function TopNav() {
   );
 }
 
-export default TopNav;
+export default PageNav;

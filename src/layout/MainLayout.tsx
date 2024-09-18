@@ -1,5 +1,5 @@
 import Sidebar from "../components/sidebar/Sidebar";
-import TopNav from "../components/topnav/TopNav";
+import PageNav from "../components/pageNav/pageNav";
 import classes from "./MainLayout.module.scss";
 
 const MainLayout = () => {
@@ -7,8 +7,8 @@ const MainLayout = () => {
     <div className={classes.container}>
       <Sidebar />
       <div className={classes.main}>
-        <div className={`${classes.main__content}`}>
-          <TopNav />
+        <div className={classes.main__content}>
+          <PageNav />
         </div>
       </div>
     </div>
