@@ -1,0 +1,72 @@
+.topNav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 12px 20px;
+
+  &_left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex: 1 1;
+    gap: 12px;
+
+    &_title {
+      color: var(--text-color-bold);
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &_tabsContainer {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      text-wrap: nowrap;
+      &_tab {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex: 1 1 0;
+        padding: 12px;
+        cursor: pointer;
+        text-align: center;
+        color: var(--text-color-disable);
+        font-size: 14px;
+        line-height: 20px;
+
+        &[aria-selected="true"] {
+          cursor: default;
+          color: var(--text-color-bold);
+          border-bottom-color: var(--primaryColor);
+          font-weight: 600;
+
+          &::after {
+            position: absolute;
+            bottom: 0;
+            width: 50%;
+            height: 3px;
+            content: "";
+            border-top-left-radius: 100px;
+            border-top-right-radius: 100px;
+            background-color: var(--primaryColor);
+          }
+        }
+      }
+    }
+  }
+  &_right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+
+    &_icon {
+      width: 20px;
+      height: 20px;
+      margin: 6px;
+    }
+  }
+}

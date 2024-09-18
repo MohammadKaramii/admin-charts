@@ -2,15 +2,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   background-color: var(--gray);
   color: var(--text-color);
+  width: 68px;
   height: 100vh;
   position: fixed;
   top: 0;
   z-index: 200;
   overflow-y: auto;
   overflow-x: hidden;
+
   &__logo {
     display: flex;
     justify-content: center;
@@ -24,6 +25,9 @@
     justify-content: flex-start;
 
     &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       position: relative;
       padding: 8px 16px;
       white-space: none;
@@ -53,6 +57,7 @@
       }
 
       &__icon {
+  
         text-align: center;
       }
       &__txt {

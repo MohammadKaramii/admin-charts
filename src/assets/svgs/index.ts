@@ -7,4 +7,6 @@ export { ReactComponent as FileSVG } from "./file.svg";
 export { ReactComponent as PlusSVG } from "./plus.svg";
 export { ReactComponent as TeamsSVG } from "./teams.svg";
 export { ReactComponent as VanArsdelSVG } from "./van-ardsel.svg";
+export { ReactComponent as VanArsdelLogoSVG } from "./van-ardsel-logo.svg";
 export { ReactComponent as LogoSVG } from "./logo.svg";
+export { ReactComponent as LinkSVG } from "./link.svg";
