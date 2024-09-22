@@ -11,6 +11,10 @@
   z-index: 200;
   overflow-y: auto;
   overflow-x: hidden;
+ 
+  @media (max-width: 768px) {
+    display: none;
+  }
 
   &__logo {
     display: flex;

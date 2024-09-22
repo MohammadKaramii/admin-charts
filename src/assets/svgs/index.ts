@@ -13,3 +13,6 @@ export { ReactComponent as LinkSVG } from "./link.svg";
 export { ReactComponent as MenuSVG } from "./menu.svg";
 export { ReactComponent as ArrowDownSVG } from "./arrow-down.svg";
 export { ReactComponent as SearchSVG } from "./search.svg";
+export { ReactComponent as SettingSVG } from "./setting.svg";
+export { ReactComponent as ExpandSVG } from "./expand.svg";
+export { ReactComponent as RobotSVG } from "./robot.svg";

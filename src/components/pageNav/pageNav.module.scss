@@ -3,6 +3,10 @@
   align-items: center;
   flex-wrap: wrap;
   padding-inline: 20px;
+  @media (max-width: 768px) {
+  justify-content: space-between;
+  padding: 12px;
+  }
 
   &_left {
     display: flex;
@@ -69,4 +73,23 @@
       margin: 6px;
     }
   }
+}
+
+.titleContainerMobile{
+display: flex;
+align-items: center;
+gap: 10px;
+
+.title{
+font-size: 26px;
+font-weight: 700;
+line-height: 31px;
+text-align: left;
+
+}
+}
+
+.settingMobile{
+  display: flex;
+  gap: 20px;
 }

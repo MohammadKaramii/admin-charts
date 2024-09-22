@@ -1,0 +1,50 @@
+.nav__menu {
+  display: none;
+ 
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    background-color: var(--white);
+    width: 100%;
+
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      white-space: none;
+      padding: 8px 16px;
+      &:hover {
+        color: var(--primaryColor);
+      }
+
+      &.active {
+        color: var(--primaryColor);
+
+        svg {
+          path {
+            fill: var(--primaryColor);
+          }
+        }
+      }
+
+      &__icon {
+        text-align: center;
+
+        svg {
+          path {
+            fill: var(--black);
+          }
+        }
+      }
+      &__txt {
+        white-space: nowrap;
+        font-size: 10px;
+        line-height: 14px;
+      }
+    }
+  }
+}

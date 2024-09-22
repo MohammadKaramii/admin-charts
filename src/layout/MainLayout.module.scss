@@ -7,8 +7,41 @@
   overflow-x: hidden;
   flex-grow: 1;
 
-  &__content {
+  &_content {
     min-height: 100vh;
-    padding-left: 68px
+    padding-left: 68px;
+
+    @media (max-width: 768px) {
+      padding-left: 0px;
+    }
+
+    &_container {
+      display: flex;
+      width: 100%;
+
+      &_cards {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        gap: 12px;
+        padding-inline: 20px;
+        padding-block: 20px;
+
+        @media (max-width: 480px) {
+          padding: 8px;
+        }
+
+        &_cardsRow {
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          gap: 12px;
+          @media (max-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+          }
+        }
+      }
+    }
   }
 }

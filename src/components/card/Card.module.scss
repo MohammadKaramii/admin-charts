@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 470px;
+  padding: 16px;
+  gap: 16px;
+  border: 1px solid var(--white);
+  box-shadow: 0px 0px 2px 0px #0000001f, 0px 2px 4px 0px #00000024;
+  flex-grow: 1;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &_tools {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.cardTabs {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  text-wrap: nowrap;
+  margin-top: 12px;
+
+  &_tab {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    cursor: pointer;
+    text-align: center;
+    color: var(--text-color-secondary);
+    font-size: 14px;
+    line-height: 20px;
+
+    &[aria-selected="true"] {
+      cursor: default;
+      color: var(--text-color-bold);
+      border-bottom-color: var(--primaryColor);
+      font-weight: 600;
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+        width: 70%;
+        height: 2px;
+        content: "";
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+        background-color: var(--primaryColor);
+      }
+    }
+  }
+}
+
+.chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details {
+  color: var(--primaryColor);
+  margin-top: auto;
+}

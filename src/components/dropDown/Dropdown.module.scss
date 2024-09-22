@@ -3,4 +3,7 @@
   height: 100vh;
   padding-block: 20px;
   border-right: 2px solid var(--gray);
+  @media (max-width: 768px) {
+    display: none;
+  }
 }

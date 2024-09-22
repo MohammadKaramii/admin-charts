@@ -9,6 +9,7 @@ html {
   --text-color-primary: #616161;
   --text-color-secondary: #424242;
   --text-color-bold: #242424;
+  --chart-color-primary: #00b7c3;
   /* ****Font family**** */
   --fontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -44,6 +45,8 @@ button {
 }
 
 body {
+  height: 100%;
+  max-height: 100dvh;
   background-color: var(--white);
   color: var(--text-color);
   font-family: var(--fontFamily);

@@ -1,5 +1,11 @@
-import { MouseEvent, useCallback, useState } from "react";
-import { ElipsisSVG, LinkSVG, VanArsdelLogoSVG } from "../../assets/svgs";
+import { MouseEvent, useCallback, useState, useEffect } from "react";
+import {
+  ElipsisSVG,
+  LinkSVG,
+  RobotSVG,
+  TeamsSVG,
+  VanArsdelLogoSVG,
+} from "../../assets/svgs";
 
 import classes from "./PageNav.module.scss";
 
@@ -13,30 +19,68 @@ function PageNav() {
     setActiveTabId(targetTabIndex);
   }, []);
 
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+
+  const breakpoint = 768;
+
+  useEffect(() => {
+   
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth < breakpoint);
+    };
+
+  
+    window.addEventListener("resize", checkScreenSize);
+
+   
+    checkScreenSize();
+
+   
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
+  }, []);
+
   return (
     <div className={classes.topNav}>
-      <div className={classes.topNav_left}>
-        <VanArsdelLogoSVG />
-        <h3 className={classes.topNav_left_title}>Van Arsdel</h3>
-        <ul className={classes.topNav_left_tabsContainer}>
-          {tabs.map((tab, index) => (
-            <li
-              key={index}
-              role="button"
-              aria-selected={activeTabId === index}
-              className={classes.topNav_left_tabsContainer_tab}
-              value={index}
-              onClick={handleClick}
-            >
-              {tab}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className={classes.topNav_right}>
-        <LinkSVG className={classes.topNav_right_icon} />
-        <ElipsisSVG  className={classes.topNav_right_icon}  />
-      </div>
+      {isSmallScreen ? (
+        <>
+          <div className={classes.titleContainerMobile}>
+            <TeamsSVG />
+            <h2 className={classes.title}>Van Ardel</h2>
+          </div>
+          <div className={classes.settingMobile}>
+            <RobotSVG />
+            <ElipsisSVG />
+          </div>
+        </>
+      ) : (
+        <>
+          <div className={classes.topNav_left}>
+            <VanArsdelLogoSVG />
+            <h3 className={classes.topNav_left_title}>Van Arsdel</h3>
+            <ul className={classes.topNav_left_tabsContainer}>
+              {tabs.map((tab, index) => (
+                <li
+                  key={index}
+                  role="button"
+                  aria-selected={activeTabId === index}
+                  className={classes.topNav_left_tabsContainer_tab}
+                  value={index}
+                  onClick={handleClick}
+                >
+                  {tab}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className={classes.topNav_right}>
+            <LinkSVG className={classes.topNav_right_icon} />
+            <ElipsisSVG className={classes.topNav_right_icon} />
+          </div>
+        </>
+      )}
     </div>
   );
 }
